@@ -1,0 +1,6 @@
+16:44:00.143 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - I am at Inicio
+16:44:01.881 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - I am at Chatter
+16:44:01.901 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - I am at Cuentas
+16:44:08.966 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - I am at Contacto
+16:44:12.343 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - I am at Casos
+16:44:14.265 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - I am at Informes

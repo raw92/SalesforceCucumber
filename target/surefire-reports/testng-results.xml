@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-06-01T17:25:28 UYT" name="Suite" finished-at="2021-06-01T17:28:29 UYT" duration-ms="180373">
+    <groups>
+    </groups>
+    <test started-at="2021-06-01T17:25:28 UYT" name="Test" finished-at="2021-06-01T17:28:29 UYT" duration-ms="180373">
+      <class name="orgSalesforce.salesforceEjercicio.ServiceTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServiceTest@3cc1435c]" started-at="2021-06-01T17:25:28 UYT" name="setup" finished-at="2021-06-01T17:25:33 UYT" duration-ms="4992" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="crearContacto()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServiceTest@3cc1435c]" started-at="2021-06-01T17:25:33 UYT" name="crearContacto" finished-at="2021-06-01T17:25:53 UYT" duration-ms="19381" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- crearContacto -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServiceTest@3cc1435c]" started-at="2021-06-01T17:25:53 UYT" name="setup" finished-at="2021-06-01T17:25:56 UYT" duration-ms="3509" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="creoDosCuentas()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServiceTest@3cc1435c]" started-at="2021-06-01T17:25:56 UYT" name="creoDosCuentas" finished-at="2021-06-01T17:26:41 UYT" duration-ms="44396" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- creoDosCuentas -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServiceTest@3cc1435c]" started-at="2021-06-01T17:26:41 UYT" name="setup" finished-at="2021-06-01T17:26:47 UYT" duration-ms="5834" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="errorCrearCuenta()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServiceTest@3cc1435c]" started-at="2021-06-01T17:26:47 UYT" name="errorCrearCuenta" finished-at="2021-06-01T17:27:04 UYT" duration-ms="17253" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- errorCrearCuenta -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServiceTest@3cc1435c]" started-at="2021-06-01T17:27:04 UYT" name="setup" finished-at="2021-06-01T17:27:07 UYT" duration-ms="3534" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="modificarCamposCuenta()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServiceTest@3cc1435c]" started-at="2021-06-01T17:27:07 UYT" name="modificarCamposCuenta" finished-at="2021-06-01T17:27:28 UYT" duration-ms="20883" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- modificarCamposCuenta -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServiceTest@3cc1435c]" started-at="2021-06-01T17:27:28 UYT" name="setup" finished-at="2021-06-01T17:27:33 UYT" duration-ms="5236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="modificarEmpleadoDeCuenta()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServiceTest@3cc1435c]" started-at="2021-06-01T17:27:33 UYT" name="modificarEmpleadoDeCuenta" finished-at="2021-06-01T17:27:49 UYT" duration-ms="15463" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- modificarEmpleadoDeCuenta -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServiceTest@3cc1435c]" started-at="2021-06-01T17:27:49 UYT" name="setup" finished-at="2021-06-01T17:27:52 UYT" duration-ms="3500" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="navegarPorServicios()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServiceTest@3cc1435c]" started-at="2021-06-01T17:27:52 UYT" name="navegarPorServicios" finished-at="2021-06-01T17:28:29 UYT" duration-ms="36362" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navegarPorServicios -->
+      </class> <!-- orgSalesforce.salesforceEjercicio.ServiceTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

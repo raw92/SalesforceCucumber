@@ -1,0 +1,6 @@
+16:46:21.260 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - Window Maximized
+16:46:21.261 [main] DEBUG orgSalesforce.salesforceEjercicio.ServicePFTest - Now hitting Salesforce server
+16:46:23.271 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - Landed on Salesforce home page
+16:46:30.504 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - I am at Inicio
+16:46:32.219 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - I am at Chatter
+16:46:32.237 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - I am at Cuentas

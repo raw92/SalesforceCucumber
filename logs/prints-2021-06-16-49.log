@@ -1,0 +1,6 @@
+16:46:36.899 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - I am at Contacto
+16:46:40.244 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - I am at Casos
+16:46:42.189 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - I am at Informes
+16:46:45.835 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - Changed from IFrame
+16:46:45.835 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - Changed back to default content
+16:46:46.386 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - I am at Paneles

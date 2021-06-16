@@ -1,0 +1,6 @@
+16:35:03.213 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - I am at Chatter
+16:35:03.235 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - I am at Cuentas
+16:35:07.967 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - I am at Contacto
+16:35:11.338 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - I am at Casos
+16:35:13.261 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - I am at Informes
+16:35:17.428 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - Changed from IFrame

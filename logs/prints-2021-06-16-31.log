@@ -1,0 +1,5 @@
+16:41:52.173 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - Changed IFrame again
+16:41:52.175 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - Changed back again to default content
+16:42:00.910 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - Window Maximized
+16:42:00.912 [main] DEBUG orgSalesforce.salesforceEjercicio.ServicePFTest - Now hitting Salesforce server
+16:42:04.272 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - Landed on Salesforce home page

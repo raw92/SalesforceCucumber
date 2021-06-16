@@ -1,0 +1,5 @@
+16:22:25.289 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - Changed from IFrame
+16:22:25.290 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - Changed back to default content
+16:22:25.872 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - I am at Paneles
+16:22:30.527 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - Changed IFrame again
+16:22:30.527 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - Changed back again to default content

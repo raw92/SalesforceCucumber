@@ -1,0 +1,5 @@
+16:30:45.977 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - Window Maximized
+16:30:45.984 [main] DEBUG orgSalesforce.salesforceEjercicio.ServicePFTest - Now hitting Salesforce server
+16:30:49.494 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - Landed on Salesforce home page
+16:31:23.546 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - Window Maximized
+16:31:23.548 [main] DEBUG orgSalesforce.salesforceEjercicio.ServicePFTest - Now hitting Salesforce server
