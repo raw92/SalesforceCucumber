@@ -6,8 +6,8 @@
       <class name="orgSalesforce.salesforceEjercicio.ServicePFTest">
         <methods>
           <include name="close"/>
-          <include name="modificarEmpleadoDeCuenta"/>
           <include name="setup"/>
+          <include name="navegarPorServicios"/>
         </methods>
       </class> <!-- orgSalesforce.salesforceEjercicio.ServicePFTest -->
     </classes>

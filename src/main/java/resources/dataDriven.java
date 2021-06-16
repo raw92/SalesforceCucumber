@@ -26,7 +26,8 @@ public class dataDriven {
 		ArrayList<String> a = new ArrayList<String>();
 
 		//Si otro quiere correrlo deberia guardar en el proyecto el archivo excel y apuntar al directorio del proyecto no local.
-		FileInputStream fis = new FileInputStream("C:\\Selenium Udemy\\Excel Selenium Ejercicio\\datos.xlsx");
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "\\src\\main\\java\\resources\\datos.xlsx");
+		
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 
 		int sheets = workbook.getNumberOfSheets();

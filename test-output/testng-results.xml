@@ -1,85 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="5" total="6" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-06-16T16:44:39 UYT" name="Suite" finished-at="2021-06-16T16:46:50 UYT" duration-ms="130822">
+  <suite started-at="2021-06-16T18:08:55 UYT" name="Default suite" finished-at="2021-06-16T18:09:08 UYT" duration-ms="13212">
     <groups>
     </groups>
-    <test started-at="2021-06-16T16:44:39 UYT" name="Test" finished-at="2021-06-16T16:46:50 UYT" duration-ms="130822">
+    <test started-at="2021-06-16T18:08:55 UYT" name="Default test" finished-at="2021-06-16T18:09:08 UYT" duration-ms="13212">
       <class name="orgSalesforce.salesforceEjercicio.ServicePFTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServicePFTest@3549bca9]" started-at="2021-06-16T16:44:39 UYT" name="setup" finished-at="2021-06-16T16:44:44 UYT" duration-ms="5054" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServicePFTest@74bada02]" started-at="2021-06-16T18:08:55 UYT" name="setup" finished-at="2021-06-16T18:09:01 UYT" duration-ms="6024" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="crearContacto()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServicePFTest@3549bca9]" started-at="2021-06-16T16:44:44 UYT" name="crearContacto" finished-at="2021-06-16T16:45:01 UYT" duration-ms="17022" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- crearContacto -->
-        <test-method is-config="true" signature="close()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServicePFTest@3549bca9]" started-at="2021-06-16T16:45:01 UYT" name="close" finished-at="2021-06-16T16:45:02 UYT" duration-ms="693" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServicePFTest@3549bca9]" started-at="2021-06-16T16:45:02 UYT" name="setup" finished-at="2021-06-16T16:45:05 UYT" duration-ms="3374" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="creoDosCuentas()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServicePFTest@3549bca9]" started-at="2021-06-16T16:45:05 UYT" name="creoDosCuentas" finished-at="2021-06-16T16:45:21 UYT" duration-ms="16293" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- creoDosCuentas -->
-        <test-method is-config="true" signature="close()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServicePFTest@3549bca9]" started-at="2021-06-16T16:45:21 UYT" name="close" finished-at="2021-06-16T16:45:22 UYT" duration-ms="639" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServicePFTest@3549bca9]" started-at="2021-06-16T16:45:22 UYT" name="setup" finished-at="2021-06-16T16:45:26 UYT" duration-ms="3825" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="errorCrearCuenta()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServicePFTest@3549bca9]" started-at="2021-06-16T16:45:26 UYT" name="errorCrearCuenta" finished-at="2021-06-16T16:45:42 UYT" duration-ms="15910" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- errorCrearCuenta -->
-        <test-method is-config="true" signature="close()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServicePFTest@3549bca9]" started-at="2021-06-16T16:45:42 UYT" name="close" finished-at="2021-06-16T16:45:42 UYT" duration-ms="629" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServicePFTest@3549bca9]" started-at="2021-06-16T16:45:42 UYT" name="setup" finished-at="2021-06-16T16:45:46 UYT" duration-ms="3269" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="modificarCamposCuenta()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServicePFTest@3549bca9]" started-at="2021-06-16T16:45:46 UYT" name="modificarCamposCuenta" finished-at="2021-06-16T16:45:59 UYT" duration-ms="12921" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- modificarCamposCuenta -->
-        <test-method is-config="true" signature="close()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServicePFTest@3549bca9]" started-at="2021-06-16T16:45:59 UYT" name="close" finished-at="2021-06-16T16:45:59 UYT" duration-ms="633" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServicePFTest@3549bca9]" started-at="2021-06-16T16:45:59 UYT" name="setup" finished-at="2021-06-16T16:46:03 UYT" duration-ms="3715" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="modificarEmpleadoDeCuenta()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServicePFTest@3549bca9]" started-at="2021-06-16T16:46:03 UYT" name="modificarEmpleadoDeCuenta" finished-at="2021-06-16T16:46:19 UYT" duration-ms="15994" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- modificarEmpleadoDeCuenta -->
-        <test-method is-config="true" signature="close()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServicePFTest@3549bca9]" started-at="2021-06-16T16:46:19 UYT" name="close" finished-at="2021-06-16T16:46:20 UYT" duration-ms="631" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServicePFTest@3549bca9]" started-at="2021-06-16T16:46:20 UYT" name="setup" finished-at="2021-06-16T16:46:23 UYT" duration-ms="3225" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="navegarPorServicios()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServicePFTest@3549bca9]" started-at="2021-06-16T16:46:23 UYT" name="navegarPorServicios" finished-at="2021-06-16T16:46:49 UYT" duration-ms="26347" status="PASS">
+        <test-method signature="navegarPorServicios()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServicePFTest@74bada02]" started-at="2021-06-16T18:09:01 UYT" name="navegarPorServicios" finished-at="2021-06-16T18:09:08 UYT" duration-ms="6528" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Cannot locate an element using css selector=.slds-icon-waffle
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-49249FS', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate an element using css selector=.slds-icon-waffle
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-49249FS', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
+at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy27.getWrappedElement(Unknown Source)
+at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:484)
+at pageObjects.LandingPage.getServicios(LandingPage.java:45)
+at resources.base.moveToService(base.java:38)
+at orgSalesforce.salesforceEjercicio.ServicePFTest.navegarPorServicios(ServicePFTest.java:144)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navegarPorServicios -->
-        <test-method is-config="true" signature="close()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServicePFTest@3549bca9]" started-at="2021-06-16T16:46:49 UYT" name="close" finished-at="2021-06-16T16:46:50 UYT" duration-ms="616" status="PASS">
+        <test-method is-config="true" signature="close()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServicePFTest@74bada02]" started-at="2021-06-16T18:09:08 UYT" name="close" finished-at="2021-06-16T18:09:08 UYT" duration-ms="629" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
       </class> <!-- orgSalesforce.salesforceEjercicio.ServicePFTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
