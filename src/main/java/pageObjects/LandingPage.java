@@ -46,6 +46,11 @@ public class LandingPage {
 		inputSearch.sendKeys("Servicio");
 		js.executeScript("arguments[0].click();", servicios);
 	}
+	
+	public WebElement getCuadradito() {
+		return cuadradito;
+		
+	}
 
 	
 }

@@ -1,5 +1,8 @@
-16:46:49.616 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - Changed IFrame again
-16:46:49.618 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - Changed back again to default content
-18:08:57.182 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - Window Maximized
-18:08:57.184 [main] DEBUG orgSalesforce.salesforceEjercicio.ServicePFTest - Now hitting Salesforce server
-18:09:01.596 [main] INFO  orgSalesforce.salesforceEjercicio.ServicePFTest - Landed on Salesforce home page
+11:40:44.820 [main] INFO  resources.base - I am at Contacto
+11:40:48.310 [main] INFO  resources.base - I am at Casos
+11:40:50.224 [main] INFO  resources.base - I am at Informes
+11:40:54.054 [main] INFO  resources.base - Changed from IFrame
+11:40:54.054 [main] INFO  resources.base - Changed back to default content
+11:40:54.605 [main] INFO  resources.base - I am at Paneles
+11:40:57.855 [main] INFO  resources.base - Changed IFrame again
+11:40:57.855 [main] INFO  resources.base - Changed back again to default content

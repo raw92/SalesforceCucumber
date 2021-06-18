@@ -1,89 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="5" total="6" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-06-16T18:08:55 UYT" name="Default suite" finished-at="2021-06-16T18:09:08 UYT" duration-ms="13212">
+  <suite started-at="2021-06-18T11:38:29 UYT" name="Suite" finished-at="2021-06-18T11:40:58 UYT" duration-ms="148959">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestRunner@59fd97a8]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2021-06-16T18:08:55 UYT" name="Default test" finished-at="2021-06-16T18:09:08 UYT" duration-ms="13212">
-      <class name="orgSalesforce.salesforceEjercicio.ServicePFTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServicePFTest@74bada02]" started-at="2021-06-16T18:08:55 UYT" name="setup" finished-at="2021-06-16T18:09:01 UYT" duration-ms="6024" status="PASS">
+    <test started-at="2021-06-18T11:38:29 UYT" name="Test" finished-at="2021-06-18T11:40:58 UYT" duration-ms="148959">
+      <class name="cucumberOptions.TestRunner">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:cucumberOptions.TestRunner@59fd97a8]" started-at="2021-06-18T11:38:29 UYT" name="setUpClass" finished-at="2021-06-18T11:38:29 UYT" duration-ms="202" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="navegarPorServicios()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServicePFTest@74bada02]" started-at="2021-06-16T18:09:01 UYT" name="navegarPorServicios" finished-at="2021-06-16T18:09:08 UYT" duration-ms="6528" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Cannot locate an element using css selector=.slds-icon-waffle
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-49249FS', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate an element using css selector=.slds-icon-waffle
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-49249FS', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy27.getWrappedElement(Unknown Source)
-at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
-at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
-at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
-at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
-at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:484)
-at pageObjects.LandingPage.getServicios(LandingPage.java:45)
-at resources.base.moveToService(base.java:38)
-at orgSalesforce.salesforceEjercicio.ServicePFTest.navegarPorServicios(ServicePFTest.java:144)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestRunner@59fd97a8]" started-at="2021-06-18T11:38:29 UYT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-06-18T11:38:52 UYT" duration-ms="23230" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Create two accounts"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Create Accounts]"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- navegarPorServicios -->
-        <test-method is-config="true" signature="close()[pri:0, instance:orgSalesforce.salesforceEjercicio.ServicePFTest@74bada02]" started-at="2021-06-16T18:09:08 UYT" name="close" finished-at="2021-06-16T18:09:08 UYT" duration-ms="629" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestRunner@59fd97a8]" started-at="2021-06-18T11:38:52 UYT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-06-18T11:39:10 UYT" duration-ms="17295" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Error creating account empty"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Create Accounts]"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- close -->
-      </class> <!-- orgSalesforce.salesforceEjercicio.ServicePFTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestRunner@59fd97a8]" started-at="2021-06-18T11:39:10 UYT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-06-18T11:39:29 UYT" duration-ms="19656" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Modificar campos de la ultima cuenta"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Create Accounts]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestRunner@59fd97a8]" started-at="2021-06-18T11:39:29 UYT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-06-18T11:39:51 UYT" duration-ms="22029" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Modificar campo empleados de la ultima cuenta"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Create Accounts]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestRunner@59fd97a8]" started-at="2021-06-18T11:39:51 UYT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-06-18T11:40:15 UYT" duration-ms="23753" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Create a contact"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Create Contact]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestRunner@59fd97a8]" started-at="2021-06-18T11:40:15 UYT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-06-18T11:40:26 UYT" duration-ms="10711" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Home page default login"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Application Login]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestRunner@59fd97a8]" started-at="2021-06-18T11:40:26 UYT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-06-18T11:40:58 UYT" duration-ms="32044" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Navigate services tabs"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Navigate Service]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumberOptions.TestRunner@59fd97a8]" started-at="2021-06-18T11:40:58 UYT" name="tearDownClass" finished-at="2021-06-18T11:40:58 UYT" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- cucumberOptions.TestRunner -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
