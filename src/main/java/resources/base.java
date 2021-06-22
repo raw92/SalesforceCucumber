@@ -17,6 +17,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -33,18 +34,17 @@ public class base {
 	
 	private static Logger log = LogManager.getLogger(base.class.getName());
 	public  WebDriver driver;
-	public Properties prop;
 	WebDriverWait wait;
-	JavascriptExecutor js;
+	static JavascriptExecutor js;
 	
 	
-	
+	//Method to initialize Driver / js Exe / Implicit and Explicit Wait / windows management etc
 	public WebDriver initializeDriver() {
+		//Generic dir to be able to open it from another machine
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\main\\java\\resources\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
 		driver = new ChromeDriver(options);
-		// timeout implicito
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		log.info("Window Maximized");
@@ -57,7 +57,7 @@ public class base {
 		return driver;
 	}
 	
-		
+	//Method to login in calls for the dataDriven class when i search for the data inside the excel	
 	public void loginSalesforce(WebDriver driver) throws IOException {
 		//pulleo info del excel
 		LoginPage lp = new LoginPage(driver);
@@ -73,68 +73,83 @@ public class base {
 
 	}
 
-	
+	//JS Generic Click
+	public static void jsClick(WebElement element) {
+		js.executeScript("arguments[0].click();", element);
+	}
+			
 	
 	public void navigateServiceTabs() throws InterruptedException, IOException {
 		ServicePage sp = new ServicePage(driver);
 
-		sp.getInicio();
+		jsClick(sp.getInicio());
 		log.info("I am at Inicio");
 
-		sp.getChatter();
+		jsClick(sp.getChatter());
 		log.info("I am at Chatter");
 
-		sp.getCuentas();
+		jsClick(sp.getCuentas());
 		log.info("I am at Cuentas");
 
+		//It will wait to the url contains that and then will click at new from Account 
 		wait.until(ExpectedConditions.urlContains("/Account/list?filterName=Recent"));
-		sp.nuevoRegistro();
+		jsClick(sp.nuevoRegistro());
 
+		//It will wait to the element to be visible and then will click at cancel from Account form
 		wait.until(ExpectedConditions.visibilityOf(sp.cancelarElemento()));
 		sp.cancelarElemento().click();
 
+		//It will wait to the url contains that and then will click at Contact
 		wait.until(ExpectedConditions.urlContains("/Account/list?filterName=Recent"));
-		sp.getContacto();
+		jsClick(sp.getContacto());
 		log.info("I am at Contacto");
 
+		//It will wait to the url contains that and then will click at new from Contact
 		wait.until(ExpectedConditions.urlContains("/Contact/list?filterName=Recent"));
-		sp.nuevoRegistro();
+		jsClick(sp.nuevoRegistro());
 
+		//It will wait to the element to be visible and then will click at cancel from Contact form
 		wait.until(ExpectedConditions.visibilityOf(sp.cancelarElemento()));
 		sp.cancelarElemento().click();
 
+		//It will wait to the url contains that and then will click at Casos
 		wait.until(ExpectedConditions.urlContains("/Contact/list?filterName=Recent"));
-		sp.getCasos();
+		jsClick(sp.getCasos());
 		log.info("I am at Casos");
 
-		
+		//It will wait to the element to be visible and then will click at new from Cases
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@title='Cambiar propietario']")));
-		sp.nuevoRegistro();
+		jsClick(sp.nuevoRegistro());
 
+		//It will wait to the element to be visible and then will click at cancel from Cases form
 		wait.until(ExpectedConditions.visibilityOf(sp.cancelarCasoElemento()));
 		sp.cancelarCasoElemento().click();
 
+		//It will wait to the url contains that and then will click at Informes
 		wait.until(ExpectedConditions.urlContains("/Case/list?filterName=Recent"));
-		sp.getInformes();
+		jsClick(sp.getInformes());
 		log.info("I am at Informes");
 
+		//It will wait to the url contains that and then will click at new Informes
 		wait.until(ExpectedConditions.urlContains("/Report/home?queryScope=mru"));
-		sp.nuevoInforme();
+		jsClick(sp.nuevoInforme());
 
-		
+		//It will wait to the iframe to change to informes frame then will click at cancel informe and change back to the default content
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(sp.frameInformes()));
 		sp.cancelarInforme();
 		log.info("Changed from IFrame");
 		log.info("Changed back to default content");
 
+		//It will wait to the url contains that and then will click at Paneles
 		wait.until(ExpectedConditions.urlContains("/Report/home?queryScope=mru"));
-		sp.getPaneles();
+		jsClick(sp.getPaneles());
 		log.info("I am at Paneles");
 
+		//It will wait to the url contains that and then will click at new Panel
 		wait.until(ExpectedConditions.urlContains("/Dashboard/home?queryScope=mru"));
-		sp.nuevoPanel();
+		jsClick(sp.nuevoPanel());
 
-		// wait.until(ExpectedConditions.visibilityOf(sp.cancelarPanelElemento()));
+		//It will wait to the iframe to change to paneles frame then will click at cancel panel and change back to the default content
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(sp.framePaneles()));
 		sp.cancelarPanel();
 		log.info("Changed IFrame again");
@@ -146,74 +161,64 @@ public class base {
 		ServicePage sp = new ServicePage(driver);
 		AccountForm af = new AccountForm(driver);
 
+		//if is the first account of the run it will enter and click at cuentas and then in new Account
 		if (i < 1) {
-			sp.getCuentas();
+			jsClick(sp.getCuentas());
 			// Click crear cuenta
-			sp.nuevoRegistro();
+			jsClick(sp.nuevoRegistro());
 
 		}
-		
-		
-		
+				
 		// Escribo nombre en form.
 		af.setNombre("nombreRandom", i);
 		
-
+		//Setting of all dropdowns using a default method which i give 2 parameters 1 is the dropdown itself and the 2nd one is the option as a string
 		// Mando opt. de dropdown VALORACION
-		af.setValoracion();
+		af.setDropdown(af.getValoracion(), "1");
 		
-
 		// Mando opt. de dropdown TIPO
-		af.setTipo();
+		af.setDropdown(af.getTipo(), "1");
 		
-
 		// Mando opt. de dropdown PROPIEDAD
-		af.setPropiedad();
+		af.setDropdown(af.getPropiedad(), "");
 		
-
 		// Mando opt. de dropddown Sector
-		af.setSector();
-		
-
+		af.setDropdown(af.getSector(), "");
+	
 		// Mando opt de dropdown Customer Priority
-		af.setCustomerPrio();
+		af.moveBottomAccountForm();
+		af.setDropdown(af.getCustomerPrio(), "");
 		
 		// Mando opt de dropdown SLA
-		af.setSLA();
-		
-
+		af.setDropdown(af.getSLA(), "");
+	
 		// Mando opt de dropdown Upsell Opportunity
-		af.setUpsell();
-		
-
+		af.setDropdown(af.getUpsell(), "");
+	
 		// Mando opt de dropdown Active
-		af.setActive();
-		
-
+		af.setDropdown(af.getActive(), "");
+	
 		// CALENDARIO click input
 		af.pickCalendarDate();
 		
-
-		if (i < 1) {
-			af.getGuardarCuentaNuevo();
-			wait.until(ExpectedConditions.urlContains("count=2"));
-		} else {
-			af.getGuardarCuenta();
-			sp.getCuentas();
-		}
-		
+		//Method to save the accounts i send the argument i to know if its the first or the second account i will create and save
+		guardarCuenta(i);
+	
 		
 	}
 	
-	public void guardarCuentaCucumber(int i) throws IOException {
+	//Method to save accounts 
+	public void guardarCuenta(int i) throws IOException {
 		AccountForm af = new AccountForm(driver);
 		ServicePage sp = new ServicePage(driver);
+		//If its the first account created in the run it will save it clicking at save and new and open a second account form to be filled / if not it will save it and go to accounts
 		if (i < 1) {
 			af.getGuardarCuentaNuevo();
+			//I wait for the url to contains that after the first account is created, otherwise test will crash when try to start filling the fields from the 2nd account
 			wait.until(ExpectedConditions.urlContains("count=2"));
 		} else {
-			af.getGuardarCuenta();
-			sp.getCuentas();
+			af.getGuardarCuenta().click();
+			jsClick(sp.getCuentas());
 		}
 	}
 
@@ -221,23 +226,19 @@ public class base {
 		ServicePage sp = new ServicePage(driver);
 		AccountForm af = new AccountForm(driver);
 		// click en cuenta
-		sp.getCuentas();
+		jsClick(sp.getCuentas());
 		
-
 		// Click crear cuenta
-		sp.nuevoRegistro();
+		jsClick(sp.nuevoRegistro());
 		
-
 		// intento guardar cuenta
-		af.getGuardarCuenta();
+		af.getGuardarCuenta().click();
 		
-
 		// valido si esta el error
 		Assert.assertTrue(af.getErrorVacio().isDisplayed());
 		
-
 		// cancelo la cuenta
-		sp.cancelarElemento();
+		sp.cancelarElemento().click();
 		
 	}
 	
@@ -246,7 +247,7 @@ public class base {
 		AccountForm af = new AccountForm(driver);
 
 		// click cuenta
-		sp.getCuentas();
+		jsClick(sp.getCuentas());
 		
 
 		// capturo nombre de cuenta
@@ -262,8 +263,7 @@ public class base {
 
 		// Abro contactos en otra pestana
 		sp.abrirContactoTab();
-		//Thread.sleep(timeout);
-
+		
 		// creo lista de ventanas
 		Set<String> windows = sp.listWindows(); // [parentId , childId]
 
@@ -276,13 +276,13 @@ public class base {
 		sp.switchWindows(childId);
 
 		// Click nuevo contacto
-		sp.nuevoRegistro();
+		jsClick(sp.nuevoRegistro());
 		
 		// seteo el nombre
 		sp.setNombreContacto(name);
 		
 		// guardo contacto
-		af.getGuardarCuenta();
+		af.getGuardarCuenta().click();
 		
 		// cambio la ventana a la original
 		sp.switchWindows(parentId);
@@ -295,13 +295,13 @@ public class base {
 		AccountForm af = new AccountForm(driver);
 
 		// click cuentas
-		sp.getCuentas();
+		jsClick(sp.getCuentas());
 		
 
 		// ingreso a modificar cuenta
 		af.modificarCuenta();
 
-		// DATOS YA GUARDADOS
+		// Capturo los DATOS YA GUARDADOS
 		// Valoracion dropdown
 		String valueValOld = af.getValoracion().getText();
 		
@@ -310,15 +310,15 @@ public class base {
 		String valueTypeOld = af.getTipo().getText();
 		
 
-		// DATOS NUEVOS A GUARDAR/MODIFICAR
+		// Seteo y Capturo los DATOS NUEVOS A GUARDAR/MODIFICAR
 		// dropdown VALORACION NUEVO
-		af.setValoracionOpcion2();
+		af.setDropdown(af.getValoracion(), "2");
 
 		String valueValNew = af.getValoracion().getText();
 		
 
 		// dropdown TIPO NUEVO
-		af.setTipoOpcion2();
+		af.setDropdown(af.getTipo(), "2");
 
 		String valueTypeNew = af.getTipo().getTagName();
 		
@@ -327,28 +327,27 @@ public class base {
 		// acciones
 		af.moveBottomAccountForm();
 		
-
 		// dropdown Upsell Opportunity viejo
 		String valueUpsellOld = af.getUpsell().getText();
 		
 
 		// dropdown Upsell Opportunity NUEVO
-		af.setUpsellOpcion2();
+		af.setDropdown(af.getUpsell(), "2");
 		
 
 		String valueUpsellNew = af.getUpsell().getText();
 		
 
 		// click guardar
-		af.getGuardarCuenta();
+		af.getGuardarCuenta().click();
 
 		// Valido modificaciones
-//		
 		Assert.assertTrue(validateAccountChanges(valueValOld,valueTypeOld,valueUpsellOld,valueValNew,valueTypeNew,valueUpsellNew));
 		
 
 	}
 	
+	//Method to validate if some of the values from the account has been changed or not i send all the old values and compares it to the new one if at least 1 is different it will be true
 	public boolean validateAccountChanges(String vOld, String tOld, String uOld, String vNew, String tNew, String uNew) {
 		boolean valid= false;
 		
@@ -364,22 +363,23 @@ public class base {
 		return valid;
 	}
 	
+	
+	//I change the input "Employee" from the "Create new Account form"
 	public void modifyEmployeeInputAccount() throws InterruptedException, IOException {
 		ServicePage sp = new ServicePage(driver);
 		AccountForm af = new AccountForm(driver);
 
 		// click cuentas
-		sp.getCuentas();
+		jsClick(sp.getCuentas());
 		
 
 		// accedo a modificar cuenta
 		af.modificarCuenta();
 
 		// Mando los numeros al campo Empleados
-
 		af.getNumeroEmpleados().sendKeys("1431655766");
-		af.getGuardarCuenta();
-		// driver.findElement(By.xpath("//button[@name='SaveEdit']")).click();
+		af.getGuardarCuenta().click();
+		
 
 		// Capturo el mensaje del error para comparar
 		String mensajeError = af.getErrorEmpleados().getText();

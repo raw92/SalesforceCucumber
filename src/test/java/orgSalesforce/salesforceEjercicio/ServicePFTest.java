@@ -43,19 +43,20 @@ public class ServicePFTest extends base {
 	public WebDriver driver;
 	
 	
-
-	@BeforeMethod // Probar BeforeTest
+	//This will trigger everytime before a testcase will start initializing the driver and opening the browser
+	@BeforeMethod
 	public void setup() {
 						
 		driver = initializeDriver();
 	}
 
+	//This will close my browser after test finish
 	@AfterMethod
 	public void close() {
 		driver.quit();
 	}
 
-	
+	//Test - Logs in and move to services then navigates to all services tabs
 	@Test
 	public void navegarPorServicios() throws InterruptedException, IOException {
 
@@ -64,7 +65,7 @@ public class ServicePFTest extends base {
 		navigateServiceTabs();
 	}
 
-	
+	//Test - logs in and move to services then create 2 accounts one after the other filling the required fields and some dropdowns
 	@Test
 	public void creoDosCuentas() throws InterruptedException, IOException {
 
@@ -76,6 +77,7 @@ public class ServicePFTest extends base {
 
 	}
 
+	//Test - logs in and move to services then try to create an account in blank should trigger an error
 	@Test
 	public void errorCrearCuenta() throws InterruptedException, IOException {
 
@@ -84,6 +86,7 @@ public class ServicePFTest extends base {
 		ErrorAccountCreation();
 	}
 
+	//Test - logs in and move to services then try to create a contact using the last account created name
 	@Test
 	public void crearContacto() throws InterruptedException, IOException {
 
@@ -94,6 +97,7 @@ public class ServicePFTest extends base {
 
 	}
 
+	//Test - logs in and move to services then goes to account select the last account created and try to modify it
 	@Test
 	public void modificarCamposCuenta() throws InterruptedException, IOException {
 
@@ -102,6 +106,8 @@ public class ServicePFTest extends base {
 		modifyLastAccount();
 	}
 
+	//Test - logs in and move to services then goes to account select the last account created and try to modify the Employee input
+	//with a given number and try to save it, should throw an error and validates if it is the required error.
 	@Test
 	public void modificarEmpleadoDeCuenta() throws InterruptedException, IOException {
 

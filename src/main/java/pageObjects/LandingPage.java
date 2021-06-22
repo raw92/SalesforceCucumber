@@ -40,7 +40,7 @@ public class LandingPage {
 	}
 
 	
-
+//After getting to Home/Landing page i click at the Square at the up/left corner then type "Servicio" and click on it to access the service page
 	public void getServicios() {
 		js.executeScript("arguments[0].click();", cuadradito);
 		inputSearch.sendKeys("Servicio");

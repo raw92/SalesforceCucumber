@@ -7,7 +7,7 @@
         <methods>
           <include name="close"/>
           <include name="setup"/>
-          <include name="navegarPorServicios"/>
+          <include name="creoDosCuentas"/>
         </methods>
       </class> <!-- orgSalesforce.salesforceEjercicio.ServicePFTest -->
     </classes>

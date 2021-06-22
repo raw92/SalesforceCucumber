@@ -3,16 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="orgSalesforce.salesforceEjercicio.ServicePFTest">
+      <class name="cucumberOptions.TestRunner">
         <methods>
-          <include name="errorCrearCuenta"/>
-          <include name="modificarEmpleadoDeCuenta"/>
-          <include name="setup"/>
-          <include name="modificarCamposCuenta"/>
-          <include name="navegarPorServicios"/>
-          <include name="creoDosCuentas"/>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="2"/>
+          <include name="tearDownClass"/>
         </methods>
-      </class> <!-- orgSalesforce.salesforceEjercicio.ServicePFTest -->
+      </class> <!-- cucumberOptions.TestRunner -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

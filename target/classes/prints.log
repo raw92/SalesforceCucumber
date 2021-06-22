@@ -1,8 +1,5 @@
-11:40:44.820 [main] INFO  resources.base - I am at Contacto
-11:40:48.310 [main] INFO  resources.base - I am at Casos
-11:40:50.224 [main] INFO  resources.base - I am at Informes
-11:40:54.054 [main] INFO  resources.base - Changed from IFrame
-11:40:54.054 [main] INFO  resources.base - Changed back to default content
-11:40:54.605 [main] INFO  resources.base - I am at Paneles
-11:40:57.855 [main] INFO  resources.base - Changed IFrame again
-11:40:57.855 [main] INFO  resources.base - Changed back again to default content
+12:30:53.372 [main] INFO  resources.base - Changed from IFrame
+12:30:53.374 [main] INFO  resources.base - Changed back to default content
+12:30:53.949 [main] INFO  resources.base - I am at Paneles
+12:30:56.772 [main] INFO  resources.base - Changed IFrame again
+12:30:56.772 [main] INFO  resources.base - Changed back again to default content

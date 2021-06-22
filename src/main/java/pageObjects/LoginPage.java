@@ -34,15 +34,17 @@ public class LoginPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		
+		//Create an object from dataDriven and use a method to access Data from a Excel file in which i have the credentials to log in
 		dataDriven d= new dataDriven();
 		data = d.getData("Login");
 		
 	}
 
+	//Pull the info inside the Array at the pos(1) getting the Username
 	public void getUsername() {
 		username.sendKeys(data.get(1));;
 	}
-
+	//Pull the info inside the Array at the pos(2) getting the Password
 	public void getPassword() {
 		Password.sendKeys(data.get(2));;
 	}

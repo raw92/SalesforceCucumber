@@ -78,84 +78,95 @@ public class ServicePage {
 		js = (JavascriptExecutor) driver;
 
 	}
+	
+	
 
-	public void getInicio() {
-		js.executeScript("arguments[0].click();", inicio);
+	public WebElement getInicio() {
+		
+		return inicio;
 		
 	}
 
-	public void getChatter() {
-		js.executeScript("arguments[0].click();", chatter);
+	public WebElement getChatter() {
+		
+		return chatter;
 		
 	}
 
-	public void getCuentas() {
-		js.executeScript("arguments[0].click();", cuentas);
+	public WebElement getCuentas() {
+		
+		return cuentas;
 		
 	}
 
-	//Cuenta / contacto / caso
-	public void nuevoRegistro() {
-		js.executeScript("arguments[0].click();", nuevo);
+	//This is for  - Cuenta / contacto / caso
+	public WebElement nuevoRegistro() {
+		
+		return nuevo;
 	}
 	
-	//Cuenta / contacto 
+	//This is for - Cuenta / contacto 
 	public WebElement cancelarElemento() {
 		return cancelar;
 	}
 
-	public void getContacto() {
-		js.executeScript("arguments[0].click();", contacto);
+	public WebElement getContacto() {
+		
+		return contacto;
 	}
 
-	public void getCasos() {
-		js.executeScript("arguments[0].click();", casos);
+	public WebElement getCasos() {
+		
+		return casos;
 	}
 	
 	public WebElement cancelarCasoElemento() {
 		return cancelarCaso;
 	}
 
-	public void getInformes() {
-		js.executeScript("arguments[0].click();", informes);
+	public WebElement getInformes() {
+		
+		return informes;
 	}
 	
-	public void nuevoInforme() {
-		js.executeScript("arguments[0].click();", nuevoInforme);
+	public WebElement nuevoInforme() {
+		
+		return nuevoInforme;
 	}
 
+	//I click on "Cancelar informe" and switch to default content
 	public void cancelarInforme() {
-		//driver.switchTo().frame(frameInformes);
+		
 		js.executeScript("arguments[0].click();", cancelarInforme);
 		driver.switchTo().defaultContent();
 	}
 	
 	public WebElement frameInformes() {
-		
 		return frameInformes;
-		
 	}
 	
-	public void getPaneles() {
-		js.executeScript("arguments[0].click();", paneles);
+	public WebElement getPaneles() {
+		
+		return paneles;
 	}
 
-	public void nuevoPanel() {
-		js.executeScript("arguments[0].click();", nuevoPanel);
+	public WebElement nuevoPanel() {
+		
+		return nuevoPanel;
 	}
 
+	//I click on "Cancelar panel" and switch to default content
 	public void cancelarPanel() {
-		//driver.switchTo().frame(framePaneles);
+		
 		js.executeScript("arguments[0].click();", cancelarPanel);
 		driver.switchTo().defaultContent();
 	}
 	
 	public WebElement framePaneles() {
-		
 		return framePaneles;
-		
 	}
 		
+	//Open contact in a new tab
 	public void abrirContactoTab() {
 		contacto.sendKeys(Keys.chord(Keys.CONTROL, Keys.ENTER));
 	}
