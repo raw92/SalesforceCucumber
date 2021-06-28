@@ -39,7 +39,7 @@ public class base {
 	
 	
 	//Method to initialize Driver / js Exe / Implicit and Explicit Wait / windows management etc
-	public WebDriver initializeDriver() {
+	public WebDriver initializeDriver(String url) {
 		//Generic dir to be able to open it from another machine
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\main\\java\\resources\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
@@ -49,7 +49,8 @@ public class base {
 		driver.manage().window().maximize();
 		log.info("Window Maximized");
 		log.debug("Now hitting Salesforce server");
-		driver.get("https://d5e0000019twseai-dev-ed.my.salesforce.com");
+		//driver.get("https://d5e0000019twseai-dev-ed.my.salesforce.com");
+		driver.get(url);
 		log.info("Landed on Salesforce home page");
 		js = (JavascriptExecutor) driver;
 		wait = new WebDriverWait(driver, 20);

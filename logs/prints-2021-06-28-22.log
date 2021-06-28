@@ -1,0 +1,9 @@
+10:01:59.672 [main] INFO  resources.base - I am at Inicio
+10:02:01.682 [main] INFO  resources.base - I am at Chatter
+10:02:01.704 [main] INFO  resources.base - I am at Cuentas
+10:02:06.748 [main] INFO  resources.base - I am at Contacto
+10:02:10.873 [main] INFO  resources.base - I am at Casos
+10:02:13.071 [main] INFO  resources.base - I am at Informes
+10:02:18.756 [main] INFO  resources.base - Changed from IFrame
+10:02:18.756 [main] INFO  resources.base - Changed back to default content
+10:02:19.316 [main] INFO  resources.base - I am at Paneles

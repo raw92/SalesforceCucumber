@@ -29,11 +29,12 @@ public class stepDefinition extends base {
 	String valueTypeNew;
 	String valueUpsellOld;
 	String valueUpsellNew;
+	
 
 	//will execute before every scenario setting up the driver and login in
 	@Before
 	public void setup() throws IOException, InterruptedException {
-		driver = initializeDriver();
+		driver = initializeDriver("https://login.salesforce.com");
 		loginSalesforce(driver);
 	}
 
@@ -250,29 +251,29 @@ public class stepDefinition extends base {
 	}
 
 	//Enters given number to Employee input and save it
-	@When("^User enters 1431655766 in Employee field and click save$")
-	public void user_enters_1431655766_in_employee_field_and_click_save() throws Throwable {
+	@When("^User enters \"([^\"]*)\" in Employee field and click save$")
+	public void user_enters_something_in_employee_field_and_click_save(String input) throws Throwable {
 		AccountForm af = new AccountForm(driver);
 
-		af.getNumeroEmpleados().sendKeys("1431655766");
+		af.getNumeroEmpleados().sendKeys(input);
 		af.getGuardarCuenta().click();
 		// jsClick(af.getGuardarCuenta());
 	}
 
 	//Capture the error and validate if its correct
-	@Then("^It should give an specific error which we will validate$")
-	public void it_should_give_an_specific_error_which_we_will_validate() throws Throwable {
+	@Then("^It should \"([^\"]*)\" error which we will validate$")
+	public void it_should_something_error_which_we_will_validate(String error) throws Throwable {
 		AccountForm af = new AccountForm(driver);
 
 		String mensajeError = af.getErrorEmpleados().getText();
-		boolean v = af.validacionErrorEmpleados(mensajeError);
+		//boolean v = af.validacionErrorEmpleados(mensajeError);
 
-		if (v) {
+		if (mensajeError.equals(error)) {
 			System.out.println("El mensaje de error coincide");
-			Assert.assertTrue(v);
+			Assert.assertTrue(true);
 		} else {
 			System.out.println("Los mensajes de error no coinciden");
-			Assert.assertTrue(v);
+			Assert.assertTrue(false);
 		}
 	}
 

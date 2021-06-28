@@ -47,7 +47,7 @@ public class ServicePFTest extends base {
 	@BeforeMethod
 	public void setup() {
 						
-		driver = initializeDriver();
+		driver = initializeDriver("https://login.salesforce.com");
 	}
 
 	//This will close my browser after test finish

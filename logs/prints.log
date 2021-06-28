@@ -1,5 +1,8 @@
-12:30:53.372 [main] INFO  resources.base - Changed from IFrame
-12:30:53.374 [main] INFO  resources.base - Changed back to default content
-12:30:53.949 [main] INFO  resources.base - I am at Paneles
-12:30:56.772 [main] INFO  resources.base - Changed IFrame again
-12:30:56.772 [main] INFO  resources.base - Changed back again to default content
+10:02:22.848 [main] INFO  resources.base - Changed IFrame again
+10:02:22.850 [main] INFO  resources.base - Changed back again to default content
+12:41:31.120 [main] INFO  resources.base - Window Maximized
+12:41:31.122 [main] DEBUG resources.base - Now hitting Salesforce server
+12:41:33.346 [main] INFO  resources.base - Landed on Salesforce home page
+12:43:22.978 [main] INFO  resources.base - Window Maximized
+12:43:22.980 [main] DEBUG resources.base - Now hitting Salesforce server
+12:43:24.705 [main] INFO  resources.base - Landed on Salesforce home page
